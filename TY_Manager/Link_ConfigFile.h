@@ -14,7 +14,8 @@
 
 #define LINKSynchronize [LINKDefaults synchronize]
 
-#define TabBarIcons @"Link_TabBarIcons"
+#define TabBarModes @"Link_TabBarModes"
+#define TabBarSelectedIndex @"TabBarSelectedIndex"
 
 
 //>>>>>>>>>>>>>>>>>>>>>>>>>>头文件<<<<<<<<<<<<<<<<<<<<<<<<//

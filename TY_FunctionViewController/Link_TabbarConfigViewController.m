@@ -92,25 +92,75 @@
 -(void)configClick:(UIButton *)sender{
     
     switch (sender.tag - 1234) {
-        case 0:
-             [LINKDefaults setObject:@[@"Tab_Icon_A_1",@"Tab_Icon_A_2",@"Tab_Icon_A_3",@"Tab_Icon_A_4"] forKey:TabBarIcons];
+        case 0:{
+            NSArray *tabbarModeArr =@[@{@"NavTitle":@"印章",
+                                        @"ViewControllerName":@"Link_FirstViewController",
+                                        @"ItemIcon":@"TypeA_Icon_A"},
+                                      @{@"NavTitle":@"闹钟",
+                                        @"ViewControllerName":@"Link_SecondViewController",
+                                        @"ItemIcon":@"TypeA_Icon_B"},
+                                      @{@"NavTitle":@"回形针",
+                                        @"ViewControllerName":@"Link_ThirdViewController",
+                                        @"ItemIcon":@"TypeA_Icon_C"},
+                                      @{@"NavTitle":@"三角尺",
+                                        @"ViewControllerName":@"Link_DeployViewController",
+                                        @"ItemIcon":@"TypeA_Icon_D"},
+                                      ];
+            
+            
+        [LINKDefaults setObject:tabbarModeArr forKey:TabBarModes];}
             break;
-        case 1:
-             [LINKDefaults setObject:@[@"Tab_Icon_A",@"Tab_Icon_B",@"Tab_Icon_C",@"Tab_Icon_D"] forKey:TabBarIcons];
+        case 1:{
+            
+            NSArray *tabbarModeArr =  @[@{@"NavTitle":@"输入",
+                                          @"ViewControllerName":@"Link_FirstViewController",
+                                          @"ItemIcon":@"TypeB_Icon_A"},
+                                        @{@"NavTitle":@"录音",
+                                          @"ViewControllerName":@"Link_SecondViewController",
+                                          @"ItemIcon":@"TypeB_Icon_B"},
+                                        @{@"NavTitle":@"查看",
+                                          @"ViewControllerName":@"Link_ThirdViewController",
+                                          @"ItemIcon":@"TypeB_Icon_C"},
+                                        @{@"NavTitle":@"我的",
+                                          @"ViewControllerName":@"Link_DeployViewController",
+                                          @"ItemIcon":@"TypeB_Icon_D"},
+                                        ];
+            
+             [LINKDefaults setObject:tabbarModeArr forKey:TabBarModes];
+        }
+            break;
+        case 2:{
+            
+            NSArray *tabbarModeArr =  @[@{@"NavTitle":@"蚕豆",
+                                          @"ViewControllerName":@"Link_FirstViewController",
+                                          @"ItemIcon":@"TypeC_Icon_A"},
+                                        @{@"NavTitle":@"黄豆",
+                                          @"ViewControllerName":@"Link_SecondViewController",
+                                          @"ItemIcon":@"TypeC_Icon_B"},
+                                        @{@"NavTitle":@"土豆",
+                                          @"ViewControllerName":@"Link_ThirdViewController",
+                                          @"ItemIcon":@"TypeC_Icon_C"},
+                                        @{@"NavTitle":@"谷子",
+                                          @"ViewControllerName":@"Link_DeployViewController",
+                                          @"ItemIcon":@"TypeC_Icon_D"},
+                                        ];
+            
+            [LINKDefaults setObject:tabbarModeArr forKey:TabBarModes];
+        }
             break;
             
         default:
             break;
     }
-    
+    [LINKDefaults setObject:[NSNumber numberWithInteger:3] forKey:TabBarSelectedIndex];
+
     LINKSynchronize;
     
-//    [self popoverPresentationController];
-    [self.navigationController popViewControllerAnimated:YES];
+//    [self.navigationController popViewControllerAnimated:YES];
     
     [[AppDelegate sharedManager] configRootViewController];
-    
-    
+
+    [LINKDefaults removeObjectForKey:TabBarSelectedIndex];
     
 }
 

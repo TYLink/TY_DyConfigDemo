@@ -18,40 +18,58 @@
 @implementation AppDelegate
 
 + (instancetype)sharedManager {
-    return [[self alloc] init];
+    
+    static dispatch_once_t pred;
+    static AppDelegate *sharedInstance = nil;
+    dispatch_once(&pred, ^{
+        sharedInstance = [[AppDelegate alloc] init];
+    });
+    return sharedInstance;
 }
-
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    if ([[LINKDefaults objectForKey:TabBarIcons] count] > 1) {
+    if ([[LINKDefaults objectForKey:TabBarModes] count] > 1) {
+        
         NSLog(@"初始化了Icon");
     }else{
-        [LINKDefaults setObject:@[@"Tab_Icon_A",@"Tab_Icon_B",@"Tab_Icon_C",@"Tab_Icon_D"] forKey:TabBarIcons];
+        
+        NSArray *tabbarArr = @[@{@"NavTitle":@"印章",
+                                 @"ViewControllerName":@"Link_FirstViewController",
+                                 @"ItemIcon":@"TypeA_Icon_A"},
+                               @{@"NavTitle":@"闹钟",
+                                 @"ViewControllerName":@"Link_SecondViewController",
+                                 @"ItemIcon":@"TypeA_Icon_B"},
+                               @{@"NavTitle":@"回形针",
+                                 @"ViewControllerName":@"Link_ThirdViewController",
+                                 @"ItemIcon":@"TypeA_Icon_C"},
+                               @{@"NavTitle":@"三角尺",
+                                 @"ViewControllerName":@"Link_DeployViewController",
+                                 @"ItemIcon":@"TypeA_Icon_D"},
+                               ];
+        [LINKDefaults setObject:tabbarArr forKey:TabBarModes];
         LINKSynchronize;
     }
     
     UIWindow *window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    
     [window makeKeyWindow];
+    
     self.window = window;
-    
-    
+        
     [self configRootViewController];
 
-    
     return YES;
 }
 
 -(void)configRootViewController{
     
-
     UIWindow * window = [[UIApplication sharedApplication] keyWindow];
     
     Link_TabbarController *tabbar = [[Link_TabbarController alloc] init];
     
     window.rootViewController = tabbar;
-    
     
 }
 
