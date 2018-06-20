@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		555D94D020D2A71B00B3F1AA /* Link_TabbarConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 555D94CF20D2A71B00B3F1AA /* Link_TabbarConfigViewController.m */; };
+		5576801F20DA4E600029BC02 /* Link_TabbarAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5576801E20DA4E600029BC02 /* Link_TabbarAddViewController.m */; };
 		557DB85220D1FFC900CC8239 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 557DB85120D1FFC900CC8239 /* AppDelegate.m */; };
 		557DB85520D1FFC900CC8239 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 557DB85420D1FFC900CC8239 /* ViewController.m */; };
 		557DB85820D1FFC900CC8239 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 557DB85620D1FFC900CC8239 /* Main.storyboard */; };
@@ -29,6 +30,8 @@
 /* Begin PBXFileReference section */
 		555D94CE20D2A71B00B3F1AA /* Link_TabbarConfigViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Link_TabbarConfigViewController.h; sourceTree = "<group>"; };
 		555D94CF20D2A71B00B3F1AA /* Link_TabbarConfigViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Link_TabbarConfigViewController.m; sourceTree = "<group>"; };
+		5576801D20DA4E600029BC02 /* Link_TabbarAddViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Link_TabbarAddViewController.h; sourceTree = "<group>"; };
+		5576801E20DA4E600029BC02 /* Link_TabbarAddViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Link_TabbarAddViewController.m; sourceTree = "<group>"; };
 		557DB84D20D1FFC900CC8239 /* TY_DynamicIcon_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TY_DynamicIcon_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		557DB85020D1FFC900CC8239 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		557DB85120D1FFC900CC8239 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -78,6 +81,8 @@
 			children = (
 				555D94CE20D2A71B00B3F1AA /* Link_TabbarConfigViewController.h */,
 				555D94CF20D2A71B00B3F1AA /* Link_TabbarConfigViewController.m */,
+				5576801D20DA4E600029BC02 /* Link_TabbarAddViewController.h */,
+				5576801E20DA4E600029BC02 /* Link_TabbarAddViewController.m */,
 			);
 			path = TY_FunctionViewController;
 			sourceTree = "<group>";
@@ -253,6 +258,7 @@
 				557DB89C20D2683800CC8239 /* Link_ThirdViewController.m in Sources */,
 				557DB8A620D26B8100CC8239 /* UIView+Link_Extensions.m in Sources */,
 				555D94D020D2A71B00B3F1AA /* Link_TabbarConfigViewController.m in Sources */,
+				5576801F20DA4E600029BC02 /* Link_TabbarAddViewController.m in Sources */,
 				557DB89920D2681900CC8239 /* Link_SecondViewController.m in Sources */,
 				557DB85520D1FFC900CC8239 /* ViewController.m in Sources */,
 				557DB86020D1FFCB00CC8239 /* main.m in Sources */,

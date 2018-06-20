@@ -9,6 +9,8 @@
 #import "Link_DeployViewController.h"
 #import "Link_ConfigFile.h"
 #import "Link_TabbarConfigViewController.h"
+#import "Link_TabbarAddViewController.h"
+
 
 @interface Link_DeployViewController ()
 
@@ -89,12 +91,13 @@
     Link_TabbarConfigViewController * VC = [[Link_TabbarConfigViewController alloc] init];
     VC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:VC animated:YES];
-    
-    
 }
 
 -(void)tabBarAddClick:(UIButton *)sender{
     
+    Link_TabbarAddViewController * VC = [[Link_TabbarAddViewController alloc] init];
+    VC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:VC animated:YES];
     
 }
 

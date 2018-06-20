@@ -9,7 +9,6 @@
 #import "Link_TabbarConfigViewController.h"
 #import "Link_ConfigFile.h"
 #import "Link_TabbarController.h"
-
 #import "AppDelegate.h"
 
 
@@ -106,8 +105,6 @@
                                         @"ViewControllerName":@"Link_DeployViewController",
                                         @"ItemIcon":@"TypeA_Icon_D"},
                                       ];
-            
-            
         [LINKDefaults setObject:tabbarModeArr forKey:TabBarModes];}
             break;
         case 1:{
@@ -142,7 +139,7 @@
                                           @"ItemIcon":@"TypeC_Icon_C"},
                                         @{@"NavTitle":@"谷子",
                                           @"ViewControllerName":@"Link_DeployViewController",
-                                          @"ItemIcon":@"TypeC_Icon_D"},
+                                          @"ItemIcon":@"TypeC_Icon_D"}
                                         ];
             
             [LINKDefaults setObject:tabbarModeArr forKey:TabBarModes];
@@ -155,8 +152,6 @@
     [LINKDefaults setObject:[NSNumber numberWithInteger:3] forKey:TabBarSelectedIndex];
 
     LINKSynchronize;
-    
-//    [self.navigationController popViewControllerAnimated:YES];
     
     [[AppDelegate sharedManager] configRootViewController];
 

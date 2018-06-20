@@ -64,9 +64,14 @@
 }
 
 -(void)configRootViewController{
-    
+//    加个过度动画
     UIWindow * window = [[UIApplication sharedApplication] keyWindow];
-    
+    CATransition *animation = [CATransition animation];
+    animation.duration = 0.8;
+    animation.timingFunction = UIViewAnimationCurveEaseInOut;
+    animation.type = kCATransitionFade;
+    animation.subtype = kCATransitionFromBottom;
+    [window.layer addAnimation:animation forKey:nil];
     Link_TabbarController *tabbar = [[Link_TabbarController alloc] init];
     
     window.rootViewController = tabbar;
